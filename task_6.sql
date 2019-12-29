@@ -1,4 +1,4 @@
-WITH resume_spec AS (
+EXPLAIN ANALYZE WITH resume_spec AS (
          SELECT resume.resume_id,
                 specialization_id AS resume_spec_ids
          FROM resume
