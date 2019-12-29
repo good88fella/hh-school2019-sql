@@ -1,16 +1,16 @@
-WITH vacancy_spec AS (
-         SELECT vacancy.vacancy_id,
-                specialization_id AS vacancy_spec_ids
-         FROM vacancy
-                  JOIN vacancy_body
-                       USING (vacancy_body_id)
-     ),
-     resume_spec AS (
+WITH resume_spec AS (
          SELECT resume.resume_id,
                 specialization_id AS resume_spec_ids
          FROM resume
                   JOIN resume_body
                        USING (resume_body_id)
+     ),
+     vacancy_spec AS (
+         SELECT vacancy.vacancy_id,
+                specialization_id AS vacancy_spec_ids
+         FROM vacancy
+                  JOIN vacancy_body
+                       USING (vacancy_body_id)
      ),
      most_response_spec AS (
          SELECT resume_id,

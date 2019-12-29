@@ -77,7 +77,5 @@ CREATE TABLE response
     vacancy_id    integer,
     resume_id     integer,
     disabled      boolean DEFAULT false NOT NULL,
-    response_time timestamp             NOT NULL,
-    FOREIGN KEY (vacancy_id) REFERENCES vacancy (vacancy_id),
-    FOREIGN KEY (resume_id) REFERENCES resume (resume_id)
+    response_time timestamp             NOT NULL
 );
